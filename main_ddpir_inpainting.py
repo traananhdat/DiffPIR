@@ -127,6 +127,7 @@ def main():
     # model.load_state_dict(
     #     dist_util.load_state_dict(args.model_path, map_location="cpu")
     # )
+    args.model_path = '/kaggle/input/model-diffpir/ffhq_10m.pt'
     model.load_state_dict(torch.load(args.model_path, map_location="cpu"))
     model.eval()
     for k, v in model.named_parameters():
